@@ -1,18 +1,18 @@
 ﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 // 14212 -> нет, 12821 -> да, 23432 -> да
    
-//  Console.Write("Введите пятизначное число: ");
-//     int number = int.Parse(Console.ReadLine());
-//     int firstDigit = number / 10000;
-//     int secondDigit = (number / 1000) % 10;
-//     int fourthDigit = (number / 10) % 10;
-//     int fifthDigit = number % 10;
-//     if (firstDigit == fifthDigit && secondDigit == fourthDigit) {
-//       Console.WriteLine($"Число {number} является палиндромом");
-//     } 
-// else {
-//       Console.WriteLine($"Число {number} не является палиндромом");
-//     }
+ Console.Write("Введите пятизначное число: ");
+    int number = int.Parse(Console.ReadLine());
+    int firstDigit = number / 10000;
+    int secondDigit = (number / 1000) % 10;
+    int fourthDigit = (number / 10) % 10;
+    int fifthDigit = number % 10;
+    if (firstDigit == fifthDigit && secondDigit == fourthDigit) {
+      Console.WriteLine($"Число {number} является палиндромом");
+    } 
+else {
+      Console.WriteLine($"Число {number} не является палиндромом");
+    }
 
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 //A (3,6,8); B (2,1,-7), -> 15.84 A (7,-5, 0); B (1,-1,9) -> 11.53
@@ -27,3 +27,14 @@
     double z2 = double.Parse(Console.ReadLine());
     double distance = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2));
     Console.WriteLine($"Расстояние между точками ({x1}, {y1}, {z1}) и ({x2}, {y2}, {z2}) равно {distance}");
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+//3 -> 1, 8, 27 5 -> 1, 8, 27, 64, 125
+
+    Console.Write("Введите число N: ");
+    int n = int.Parse(Console.ReadLine());
+    Console.WriteLine("Таблица кубов чисел:");
+    for (int i = 1; i <= n; i++) {
+      int cube = i * i * i;
+      Console.WriteLine($"{i}   {cube}");
+    }
